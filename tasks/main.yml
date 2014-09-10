@@ -1,10 +1,46 @@
 ---
-- name: ensure personal login packages are installed
+- name: ensure latex packages are installed
   apt: 
     pkg: "{{ item }}" 
     state: latest 
     update_cache: yes 
     cache_valid_time: 600
-  register: install_packages
   with_items:
-    - gnucash
+    - biber
+    - bibtool
+    - chktex
+    - latex-beamer
+    - latex-mk
+    - texlive-base
+    - texlive-bibtex-extra
+    - texlive-extra-utils
+    - texlive-font-utils
+    - texlive-formats-extra
+    - texlive-generic-extra
+    - texlive-lang-english
+    - texlive-lang-french
+    - texlive-latex-base
+    - texlive-latex-extra
+    - texlive-latex-recommended
+    - texlive-math-extra
+    - texlive-pictures
+    - texlive-plain-extra
+    - texlive-pstricks
+    - texlive-publishers
+    - texlive-science
+    - texlive-xetex
+
+- name: ensure latex font packages are installed
+  apt: 
+    pkg: "{{ item }}" 
+    state: latest 
+    update_cache: yes 
+    cache_valid_time: 600
+  with_items:
+    - cm-super
+    - fonts-mathjax
+    - fonts-mathjax-extras
+    - fonts-texgyre
+    - texlive-fonts-extra
+    - texlive-fonts-recommended
+     

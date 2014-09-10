@@ -1,5 +1,5 @@
-marklee77.login-personal
-========================
+marklee77.latex
+===============
 
 FIXME!
 
@@ -18,7 +18,7 @@ Example Playbook
 
     - hosts: all
       roles:
-        - marklee77.chrony
+        - marklee77.latex
 
 License
 -------
