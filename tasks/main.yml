@@ -29,6 +29,7 @@
     - texlive-publishers
     - texlive-science
     - texlive-xetex
+    - xindy
 
 - name: ensure latex font packages are installed
   apt: 
